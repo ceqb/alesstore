@@ -1,0 +1,29 @@
+server:
+  port: 9002
+  servlet:
+    context-path: /api/v1
+mercadopago:
+  access-token: APP_USR-7158935000102599-061214-cba7f4dd78f08d8ba4bf0284896a57f5-372100391
+  api-url: https://api.mercadopago.com
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bd_Proyecto_Venta_Mercado
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    open-in-view: false
+    properties:
+      hibernate.dialect.storage_engine: innodb
+  error:
+  include-message: always
+  include-binding-errors: always
+  include-stacktrace: on_trace_param
+  include-exception: false
