@@ -1,4 +1,8 @@
 # Imagen oficial de Java 17
 FROM eclipse-temurin:17-jdk-alpine
-COPY target/*.jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+# Crear directorio de trabajo dentro del contenedor
+WORKDIR /app
+# Copiar el JAR generado al contenedor
+COPY target/Proyecto_Venta_Mercado-0.0.1-SNAPSHOT.jar app.jar
+# Comando para ejecutar el JAR
+ENTRYPOINT ["java", "-jar", "app.jar"]
