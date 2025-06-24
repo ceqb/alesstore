@@ -9,6 +9,7 @@ com\Proyecto_Venta_Mercado\dto\VentaDTO$VentaDTOBuilder.class
 com\Proyecto_Venta_Mercado\controller\MercadoPagoController.class
 com\Proyecto_Venta_Mercado\repository\VentaRepository.class
 com\Proyecto_Venta_Mercado\dto\MercadoPagoItem.class
+com\Proyecto_Venta_Mercado\model\Prueba.class
 com\Proyecto_Venta_Mercado\model\ItemVenta$ItemVentaBuilder.class
 com\Proyecto_Venta_Mercado\SistemaApplication.class
 com\Proyecto_Venta_Mercado\services\MercadoPagoService.class
@@ -17,6 +18,7 @@ com\Proyecto_Venta_Mercado\dto\MercadoPago$MercadoPagoBuilder.class
 com\Proyecto_Venta_Mercado\dto\VentaDTO.class
 com\Proyecto_Venta_Mercado\controller\MercadoPagoWebhookController.class
 com\Proyecto_Venta_Mercado\dto\MercadoPago$Item.class
+com\Proyecto_Venta_Mercado\model\Prueba$PruebaBuilder.class
 com\Proyecto_Venta_Mercado\services\MercadoPagoService$2.class
 com\Proyecto_Venta_Mercado\model\Venta$VentaBuilder.class
 com\Proyecto_Venta_Mercado\payload\ApiResponse.class
