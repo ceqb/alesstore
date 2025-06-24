@@ -10,7 +10,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOriginPatterns("http://localhost:4200", "https://alesstore-prueba.netlify.app")
+                .allowedOriginPatterns("http://localhost:4200", "https://alesstore-prueba.netlify.app", "https://alesstore.onrender.com")
                 .allowedMethods("*")
                 .allowedHeaders("*")
                 .allowCredentials(true);
