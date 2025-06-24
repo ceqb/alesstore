@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = {"https://alesstore-prueba.netlify.app", "https://alesstore.onrender.com"})
+
 @RequestMapping("/api/v1")
 public class HealthController {
     @GetMapping("/health")
