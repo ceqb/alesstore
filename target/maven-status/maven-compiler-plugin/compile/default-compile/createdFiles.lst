@@ -1,3 +1,4 @@
+com\Proyecto_Venta_Mercado\controller\HealthController.class
 com\Proyecto_Venta_Mercado\services\impl\VentaServiceImpl.class
 com\Proyecto_Venta_Mercado\model\ItemVenta.class
 com\Proyecto_Venta_Mercado\model\DetalleVenta$DetalleVentaBuilder.class

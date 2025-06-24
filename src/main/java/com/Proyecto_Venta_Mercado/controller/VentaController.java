@@ -20,8 +20,6 @@ import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
-@ResponseStatus
-@RestControllerAdvice
 @RequestMapping("/ventas")
 
 public class VentaController {
