@@ -23,9 +23,8 @@ import java.util.List;
 @ResponseStatus
 @RestControllerAdvice
 @RequestMapping("/ventas")
-@CrossOrigin(origins = "*")
-public class VentaController {
 
+public class VentaController {
 
     private final VentaService ventaService;
     private final MercadoPagoService mercadoPagoService;
