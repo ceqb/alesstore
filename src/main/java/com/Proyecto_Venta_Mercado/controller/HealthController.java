@@ -1,11 +1,13 @@
 package com.Proyecto_Venta_Mercado.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = {"https://alesstore-prueba.netlify.app", "https://alesstore.onrender.com"})
 @RequestMapping("/api/v1")
 public class HealthController {
     @GetMapping("/health")
