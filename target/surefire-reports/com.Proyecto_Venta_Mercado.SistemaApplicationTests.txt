@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.Proyecto_Venta_Mercado.SistemaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.855 s -- in com.Proyecto_Venta_Mercado.SistemaApplicationTests
