@@ -7,7 +7,7 @@ mercadopago:
   api-url: https://api.mercadopago.com
 spring:
   datasource:
-    # url: ${SPRING_DATASOURCE_URL}
+    #url: ${SPRING_DATASOURCE_URL}
     #username: ${SPRING_DATASOURCE_USERNAME}
     #password: ${SPRING_DATASOURCE_PASSWORD}
     url: jdbc:mysql://sql10.freesqldatabase.com:3306/sql10785971
@@ -26,7 +26,7 @@ spring:
     generate-ddl: true
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     open-in-view: false
