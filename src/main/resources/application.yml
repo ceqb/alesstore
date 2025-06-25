@@ -7,12 +7,12 @@ mercadopago:
   api-url: https://api.mercadopago.com
 spring:
   datasource:
-    # url: ${SPRING_DATASOURCE_URL}
-    #username: ${SPRING_DATASOURCE_USERNAME}
-    #password: ${SPRING_DATASOURCE_PASSWORD}
-    url: jdbc:mysql://sql10.freesqldatabase.com:3306/sql10785971
-    username: sql10785971
-    password: gN3jPC3R1p
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    #url: jdbc:mysql://sql10.freesqldatabase.com:3306/sql10785971
+    #username: sql10785971
+    #password: gN3jPC3R1p
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 5         # Render y bases gratuitas no soportan más
@@ -26,7 +26,7 @@ spring:
     generate-ddl: true
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     open-in-view: false
