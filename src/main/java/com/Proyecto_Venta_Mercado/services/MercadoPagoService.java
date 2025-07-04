@@ -5,7 +5,6 @@ package com.Proyecto_Venta_Mercado.services;
 
 
 import com.Proyecto_Venta_Mercado.dto.MercadoPago;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
@@ -20,8 +19,7 @@ import java.util.stream.Collectors;
 public class MercadoPagoService {
 
     private final WebClient webClient;
-    @Autowired
-    private VentaService ventaService; // necesitas inyectarlo
+
     @Value("${mercadopago.access-token}")
     private String accessToken;
 
@@ -47,11 +45,6 @@ public class MercadoPagoService {
         metadata.put("cliente", request.getCliente());
         body.put("metadata", metadata);
 
-        // 🔥 Aquí asignamos una referencia única para identificar la venta
-        String referenciaVenta = request.getExternalReference(); // este campo debe estar en tu DTO
-        body.put("external_reference", referenciaVenta);
-
-
         Map<String, Object> response = webClient.post()
                 .uri(uriBuilder -> uriBuilder
                         .path("/checkout/preferences")
@@ -65,21 +58,11 @@ public class MercadoPagoService {
         return (String) response.get("init_point");
     }
     public Map<String, Object> procesarPago(String paymentId) {
-        Map<String, Object> pago = webClient.get()
+        return webClient.get()
                 .uri("/v1/payments/{paymentId}", paymentId)
                 .header("Authorization", "Bearer " + accessToken)
                 .retrieve()
                 .bodyToMono(new ParameterizedTypeReference<Map<String, Object>>() {})
-                .block();
-
-        // Solo si el pago fue aprobado
-        if (pago != null && "approved".equals(pago.get("status"))) {
-            String externalReference = (String) pago.get("external_reference");
-            if (externalReference != null) {
-                ventaService.actualizarEstadoPago(externalReference);
-            }
-        }
-
-        return pago;
+                .block(); // <-- bloquea y devuelve la respuesta
     }
 }

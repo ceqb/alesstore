@@ -60,18 +60,6 @@ public class VentaServiceImpl implements VentaService {
                 .build();
     }
     @Override
-    public void actualizarEstadoPago(String externalReference) {
-        Optional<Venta> ventaOptional = ventaRepository.findByExternalReference(externalReference);
-
-        if (ventaOptional.isPresent()) {
-            Venta venta = ventaOptional.get();
-            venta.setMetodoPago("PAGADO");
-            ventaRepository.save(venta);
-        } else {
-            throw new ResourceNotFoundException("No se encontró una venta con referencia: " + externalReference);
-        }
-    }
-    @Override
     public VentaDTO save(VentaDTO  ventaDTO) {
         Venta venta = ventaMapper.toEntity(ventaDTO);
         venta.setFecha(LocalDateTime.now());

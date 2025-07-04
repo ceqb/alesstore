@@ -13,6 +13,5 @@ public interface VentaService {
     VentaDTO  save(VentaDTO ventaDTO); //GUARDAR CATEGORIA
     void delete(Long id); //ELIMINAR USUARIO POR ID
     Venta findById(Long id); //LISTAR POR ID
-    void actualizarEstadoPago(String externalReference);
     //Venta update(Venta model);//ACTUALIZA USUARIOS POR ID
 }

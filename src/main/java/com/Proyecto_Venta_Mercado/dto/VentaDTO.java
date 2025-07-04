@@ -32,6 +32,6 @@ public class VentaDTO implements Serializable {
     private List<ItemVentaDTO> items;
     private BigDecimal total;
 
-    private String externalReference;
+
 
 }
