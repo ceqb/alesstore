@@ -37,4 +37,7 @@ public class Venta implements Serializable {
 
     @Column(name = "total", nullable = false)
     private BigDecimal total;
+
+    @Column(name = "external_reference", unique = true)
+    private String externalReference;
 }

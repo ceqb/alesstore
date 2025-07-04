@@ -1,7 +1,8 @@
 server:
   port: 9002
   servlet:
-    context-path: /api/v1
+    context-path:
+
 mercadopago:
   access-token: APP_USR-7158935000102599-061214-cba7f4dd78f08d8ba4bf0284896a57f5-372100391
   api-url: https://api.mercadopago.com

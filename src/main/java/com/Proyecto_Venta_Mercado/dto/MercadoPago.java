@@ -30,7 +30,7 @@ public class MercadoPago {
     public String getCliente() {
         return cliente;
     }
-
+    private String externalReference; // Agrega el getter/setter
     public void setCliente(String cliente) {
         this.cliente = cliente;
     }

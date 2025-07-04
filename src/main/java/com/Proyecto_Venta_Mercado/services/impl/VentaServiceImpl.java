@@ -11,6 +11,7 @@ import com.Proyecto_Venta_Mercado.repository.VentaRepository;
 import com.Proyecto_Venta_Mercado.services.MercadoPagoService;
 import com.Proyecto_Venta_Mercado.services.VentaService;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -58,6 +59,14 @@ public class VentaServiceImpl implements VentaService {
         return MercadoPago.builder()
                 .items(items)
                 .build();
+    }
+    @Transactional
+    public void actualizarEstadoPago(String externalReference) {
+        Venta venta = ventaRepository.findByExternalReference(externalReference)
+                .orElseThrow(() -> new ResourceNotFoundException("Venta no encontrada para referencia: " + externalReference));
+
+        venta.setMetodoPago("PAGADO");
+        ventaRepository.save(venta);
     }
     @Override
     public VentaDTO save(VentaDTO  ventaDTO) {
